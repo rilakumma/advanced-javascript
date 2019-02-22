@@ -82,9 +82,9 @@ container20();
 // Definition from MDN: "A closure is the combination of a function and the lexical environment within which that function was declared."
 // Ty's Definition: a closure is controlled access to a scope, via a function.
 
-// By passing functions, we can give the ability to access a scope that otherwise wouldn't be possible. Technically all functions are closures. Not all functions are used as closures, as in, for the sake of accessing a scope
+// By passing functions, we can give the ability to access a scope that otherwise wouldn't be possible. Technically all functions are closures. Not all functions are used as closures, as in, for the sake of accessing a scope.
 
-// Challenge highlight in your editor the closure in container20.
+// Challenge: highlight in your editor the closure in container20.
 
 // Hmm. When we call x(), m is created as a local variable. What happens if we call x again? That's right, it's created as a separate local variable! The second time x() is called, it's a new and separate scope!
 function container30() {
@@ -96,6 +96,27 @@ function container30() {
     }
     return y;
   }
+  
+  const q = x()
+  q()
+  q()
+  const q2 = x()
+  q2()
+  q()
+  q()
+}
+container30()
+
+
+
+
+
+
+
+
+
+
+
 
   const q = x();
   q();
@@ -111,11 +132,28 @@ function container30() {
 function container11() {
   function x(num) {
     const m = num;
+  function x() {
+    let m = 11
     function y() {
       return m;
     }
     return y;
   }
+  
+  const q = x()
+  const n = q()
+  // console.log('n', n)
+}
+container11()
+
+
+
+
+
+
+
+
+
 
   const q = x(6);
   const n = q();
@@ -128,8 +166,7 @@ const msg = "hi";
 // setTimeout(() => console.log(msg), 0);
 //
 
-// Challenge 2: Make i print properly (1-5, not all 6). Do not change var to
-// let; there's another way.
+// Challenge 2: Make i print properly (1-5, not all 6). Do not use `let` or `const` anywhere.
 function container40() {
   // const inc = num => setTimeout(() => console.log(`timeout for i = ${num}`), num * 1000);
   for (var i = 1; i <= 5; i++) {
@@ -167,6 +204,19 @@ function container50() {
   f2();
 }
 container50();
+
+
+
+
+
+// See closures in React.
+// View src/Closures.js.
+
+
+
+
+
+
 
 // Module pattern
 // If you understand closures, you understand the module pattern. Rather than passing 1 function, we pass multiple functions, use in an object. This is how node modules work.
@@ -217,6 +267,10 @@ test.addStudent(2, "christian");
 test.deleteStudent(1);
 test.addStudent(3, "madi");
 console.log(test.getStudents());
+
+
+
+
 
 // Challenge: have your neighbor ask you "what is a closure?" The best answer will include a description of when/where you've used closures before.
 
