@@ -96,34 +96,22 @@ function container30() {
     }
     return y;
   }
-  
-  const q = x()
-  q()
-  q()
-  const q2 = x()
-  q2()
-  q()
-  q()
-}
-container30()
-
-
-
-
-
-
-
-
-
-
-
 
   const q = x();
   q();
   q();
   const q2 = x();
   q2();
+  q();
+  q();
 }
+
+// const q = x();
+// q();
+// q();
+// const q2 = x();
+// q2();
+//
 // container30();
 
 // Challenge 1
@@ -132,28 +120,19 @@ container30()
 function container11() {
   function x(num) {
     const m = num;
-  function x() {
-    let m = 11
-    function y() {
-      return m;
+    function x() {
+      let m = 11;
+      function y() {
+        return m;
+      }
+      return y;
     }
-    return y;
+
+    const q = x();
+    const n = q();
+    // console.log('n', n)
   }
-  
-  const q = x()
-  const n = q()
-  // console.log('n', n)
-}
-container11()
-
-
-
-
-
-
-
-
-
+  container11();
 
   const q = x(6);
   const n = q();
@@ -205,18 +184,8 @@ function container50() {
 }
 container50();
 
-
-
-
-
 // See closures in React.
 // View src/Closures.js.
-
-
-
-
-
-
 
 // Module pattern
 // If you understand closures, you understand the module pattern. Rather than passing 1 function, we pass multiple functions, use in an object. This is how node modules work.
@@ -267,10 +236,6 @@ test.addStudent(2, "christian");
 test.deleteStudent(1);
 test.addStudent(3, "madi");
 console.log(test.getStudents());
-
-
-
-
 
 // Challenge: have your neighbor ask you "what is a closure?" The best answer will include a description of when/where you've used closures before.
 

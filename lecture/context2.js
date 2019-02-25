@@ -1,7 +1,7 @@
-function getNameForPhonebook() {
-  return this.lastName + ', ' + this.firstName
+function getNameForPhonebook(more) {
+  return this.lastName + ", " + this.firstName + " " + more;
 }
 
 module.exports = {
   getNameForPhonebook
-}
+};
