@@ -34,16 +34,8 @@ export class Context extends Component {
         <ContextChild onClick={this.onClick} />
         <div>Counter: {this.state.counter}</div>
       </div>
-<<<<<<< HEAD
     );
   }
 }
 
 export default Context;
-=======
-    )
-  }
-}
-
-export default Context
->>>>>>> 0075168a08833288fa2b6788eb03a3cb6116d341
