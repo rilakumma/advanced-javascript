@@ -6,6 +6,7 @@ import References from "./References";
 import Async from "./Async";
 import Closures from "./Closures";
 import Context from "./Context";
+import RenderProps from "./RenderProps";
 
 class App extends Component {
   render() {
@@ -25,6 +26,16 @@ class App extends Component {
         <Route path="/async" component={Async} />
         <Route path="/closures" component={Closures} />
         <Route path="/context" component={Context} />
+        <Route
+          path="/render-props"
+          render={() => {
+            if (true) {
+              return <RenderProps />;
+            } else {
+              return <div>It's false so I'm rendering this!</div>;
+            }
+          }}
+        />
       </div>
     );
   }

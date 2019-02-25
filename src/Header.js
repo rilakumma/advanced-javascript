@@ -13,6 +13,7 @@ export class Header extends Component {
           <NavLink to="/async">Async</NavLink>
           <NavLink to="/closures">Closures</NavLink>
           <NavLink to="/context">Context</NavLink>
+          <NavLink to="/render-props">Render Props</NavLink>
         </nav>
       </header>
     );
