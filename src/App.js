@@ -7,6 +7,7 @@ import Async from "./Async";
 import Closures from "./Closures";
 import Context from "./Context";
 import RenderProps from "./RenderProps";
+import Cors from "./Cors";
 
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
             }
           }}
         />
+        <Route path="/cors" component={Cors} />
       </div>
     );
   }
